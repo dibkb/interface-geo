@@ -3,11 +3,14 @@ import ThreeGridLayout from "../_layout/three-grid";
 import { Logo } from "./logo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Edges from "./edges";
 
 const Navbar = () => {
   return (
     <ThreeGridLayout className="h-[100px]">
-      <main className="px-8 h-full flex justify-between items-center">
+      <main className="px-8 h-full flex justify-between items-center relative">
+        <Edges.BottomRight transparent={true} />
+        <Edges.BottomLeft transparent={true} />
         <Logo />
         <ul className="flex items-center gap-4 text-sm font-semibold text-white/64">
           <li>
