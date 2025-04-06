@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ChevronDown } from "lucide-react";
 import { Performance, PerformanceLocked } from "../_components/llm/performance";
 import Box from "../_layout/box";
 import ThreeGridLayout from "../_layout/three-grid";
@@ -41,7 +41,10 @@ export default function LLM() {
         <Box className="w-[1000px] mx-auto flex justify-between items-center p-4">
           <div className="flex flex-col gap-8 p-6 w-full">
             <div className="flex items-center justify-between gap-2">
-              <Box className="px-4 py-2">dd</Box>
+              <Box className="px-4 py-2 flex items-center gap-2 text-sm font-semibold">
+                LLMs.txt
+                <ChevronDown className="w-4 h-4" />
+              </Box>
               <button className="bg-white rounded-md py-3 z-100 text-background flex items-center gap-2 px-4 hover:bg-foreground/90 transition-colors duration-300 cursor-pointer text-xs font-bold">
                 <CopySvg />
                 Copy
