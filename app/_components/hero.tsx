@@ -1,5 +1,7 @@
 import React from "react";
 import ThreeGridLayout from "../_layout/three-grid";
+import { cn } from "@/lib/utils";
+import Edges from "./edges";
 
 const Hero = () => {
   return (
@@ -16,8 +18,17 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="mt-6 w-[600px]">
-          <form className="flex items-center gap-2 border border-foreground/8 px-8 py-4">
+        <div className="mt-6 w-[600px] relative">
+          <Edges.TopLeft />
+          <Edges.TopRight />
+          <Edges.BottomRight />
+          <Edges.BottomLeft />
+          <form
+            className={cn(
+              "flex items-center gap-2 border border-foreground/8 px-8 py-4",
+              "focus-within:border-foreground/20 hover:border-foreground/20 transition-all duration-200"
+            )}
+          >
             <input
               type="text"
               placeholder="Enter your website URL"

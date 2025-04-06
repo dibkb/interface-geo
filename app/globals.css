@@ -47,6 +47,7 @@
   --radius: 0.625rem;
   --background: #080808;
   /* --background: oklch(1 0 0); */
+  --box-background: #393939;
   --foreground: #fff;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
