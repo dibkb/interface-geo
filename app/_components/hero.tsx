@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 const Hero = () => {
   return (
-    <ThreeGridLayout className="h-full">
+    <ThreeGridLayout className="h-full flex-1">
       <section className="flex flex-col h-full items-center justify-center relative">
         {/* arcs */}
         <div className="absolute bottom-0 left-0 w-44 h-44 rounded-tr-full border-t border-r border-foreground/8" />
@@ -27,7 +27,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="mt-6 w-[600px] relative">
+        <div className="mt-6 w-[90%] xl:w-[600px] relative">
           <Edges.TopLeft />
           <Edges.TopRight />
           <Edges.BottomRight />
@@ -47,7 +47,7 @@ const Hero = () => {
         </div>
         <Button
           asChild
-          className="mt-8 bg-white text-black hover:bg-foreground/90 cursor-pointer transition-all duration-200 py-6 flex items-center gap-2 font-bold"
+          className="mt-8 bg-white text-black hover:bg-foreground/90 cursor-pointer transition-all duration-200 py-6 flex items-center gap-2 font-bold mb-8 xl:mb-0"
         >
           <Link href="/auth/signin">
             Try for free
