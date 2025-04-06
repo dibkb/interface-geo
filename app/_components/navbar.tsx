@@ -42,7 +42,7 @@ const Navbar = () => {
           color="white"
           className="bg-white text-background hover:bg-white/90 cursor-pointer transition-all duration-300"
         >
-          Button
+          Book a call
         </Button>
       </main>
     </ThreeGridLayout>
