@@ -8,7 +8,8 @@ const Footer = ({ className }: { className?: string }) => {
     <ThreeGridLayout className={cn("border-none", className)}>
       <section className="flex h-full items-center px-12 justify-between relative">
         <Link
-          href="/"
+          href="/privacy-policy.pdf"
+          target="_blank"
           className="text-sm text-foreground/64 font-semibold hover:text-foreground transition-colors duration-300"
         >
           Privacy Policy
@@ -21,10 +22,13 @@ const Footer = ({ className }: { className?: string }) => {
         </Link>
 
         <div className="flex items-center gap-2">
-          <Link href="/">
+          <Link target="_blank" href="https://x.com/getinterface">
             <Xsvg className="text-foreground/64 hover:text-foreground transition-colors duration-300" />
           </Link>
-          <Link href="/">
+          <Link
+            target="_blank"
+            href="https://www.linkedin.com/company/interface-ai-labs/"
+          >
             <LinkedinSvg className="text-foreground/64 hover:text-foreground transition-colors duration-300" />
           </Link>
         </div>

@@ -9,8 +9,8 @@ export default function Home() {
       <section className="h-[calc(100vh-100px)] flex flex-col">
         <Hero />
         <MainSection />
-        <Footer className="h-[150px]" />
       </section>
+      <Footer className="h-[150px]" />
     </main>
   );
 }

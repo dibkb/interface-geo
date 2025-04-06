@@ -4,7 +4,7 @@ import ThreeGridLayout from "../_layout/three-grid";
 import { cn } from "@/lib/utils";
 import Edges from "./edges";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 const Hero = () => {
   return (
     <ThreeGridLayout className="h-full flex-1">
@@ -41,8 +41,11 @@ const Hero = () => {
             <input
               type="text"
               placeholder="Enter your website URL"
-              className="outline-none font-medium text-2xl"
+              className="outline-none font-medium text-2xl flex-1"
             />
+            <button className="cursor-pointer" type="submit">
+              <ArrowUpRight className="w-8 h-8 text-foreground/64 hover:text-foreground transition-all duration-200" />
+            </button>
           </form>
         </div>
         <Button
@@ -50,7 +53,7 @@ const Hero = () => {
           className="mt-8 bg-white text-black hover:bg-foreground/90 cursor-pointer transition-all duration-200 py-6 flex items-center gap-2 font-bold mb-8 xl:mb-0"
         >
           <Link href="/auth/signin">
-            Try for free
+            Optimise for free
             <ArrowRight className="w-4 h-4" />
           </Link>
         </Button>

@@ -1,5 +1,4 @@
 import Edges from "@/app/_components/edges";
-import { GoogleSvg, ShopifySvg } from "@/app/_components/svg/social";
 import Box from "@/app/_layout/box";
 import ThreeGridLayout from "@/app/_layout/three-grid";
 import { ArrowUpRight } from "lucide-react";
@@ -25,35 +24,34 @@ export default function SignIn() {
           </p>
         </div>
 
-        <Box className="xl:w-[370px] mt-8 p-8 py-12 flex flex-col gap-4">
+        <Box className="xl:w-[450px] mt-8 p-8 py-16 flex flex-col gap-4">
           <Link href="/auth/login">
-            <Box className="w-min px-4 mb-12 py-2 mx-auto text-foreground/64 hover:text-foreground transition-colors duration-300 text-sm hover:border-foreground/20 cursor-pointer whitespace-nowrap">
-              Sign-up
+            <Box className="w-min px-4 mb-12 py-2 mx-auto text-foreground/64 text-sm cursor-pointer whitespace-nowrap font-semibold">
+              Waitlist
             </Box>
           </Link>
+          <Box className="w-full px-4 py-2 mx-auto text-foreground/64 hover:text-foreground transition-colors duration-300 text-sm hover:border-foreground/20 cursor-pointer flex items-center gap-2">
+            <form className="flex items-center gap-2 w-full">
+              <input
+                type="text"
+                placeholder="Enter your email"
+                className="bg-transparent border-none outline-none flex-1"
+              />
+              <button
+                type="submit"
+                className="text-foreground/64 hover:text-foreground transition-colors duration-300 cursor-pointer font-semibold"
+              >
+                <ArrowUpRight className="w-6 h-6" />
+              </button>
+            </form>
+          </Box>
 
-          <Link href="/auth/login">
-            <Box className=" px-4 py-2 mx-auto text-foreground/64 hover:text-foreground transition-colors duration-300 text-sm hover:border-foreground/20 cursor-pointer flex items-center gap-2">
-              <GoogleSvg className="w-5 h-5" />
-              <p className="text-sm flex-1">Sign-up using Google</p>
-              <ArrowUpRight className="w-6 h-6" />
-            </Box>
-          </Link>
-
-          <Link href="/auth/login">
-            <Box className=" px-4 py-2 mx-auto text-foreground/64 hover:text-foreground transition-colors duration-300 text-sm hover:border-foreground/20 cursor-pointer flex items-center gap-2">
-              <ShopifySvg className="w-6 h-6" />
-              <p className="text-sm flex-1">Sign-up using Shopify</p>
-              <ArrowUpRight className="w-6 h-6" />
-            </Box>
-          </Link>
-
-          <Link
-            href="/auth/login"
-            className="mx-auto my-6 text-foreground/64 hover:text-foreground transition-colors duration-300 text-sm"
+          <p
+            // href="/auth/login"
+            className="mx-auto my-6 text-foreground/64 text-sm"
           >
-            Already have an account?
-          </Link>
+            We’ll get in touch shortly!
+          </p>
         </Box>
       </section>
     </ThreeGridLayout>

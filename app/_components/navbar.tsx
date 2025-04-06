@@ -1,7 +1,7 @@
+"use client";
 import React from "react";
 import ThreeGridLayout from "../_layout/three-grid";
 import { Logo } from "./logo";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Edges from "./edges";
 
@@ -12,7 +12,7 @@ const Navbar = () => {
         <Edges.BottomRight transparent={true} />
         <Edges.BottomLeft transparent={true} />
         <Logo />
-        <ul className="flex items-center gap-4 text-sm font-semibold text-white/64">
+        {/* <ul className="flex items-center gap-6 text-sm font-semibold text-white/64">
           <li>
             <Link
               href="/"
@@ -37,9 +37,15 @@ const Navbar = () => {
               Integrations
             </Link>
           </li>
-        </ul>
+        </ul> */}
         <Button
           color="white"
+          onClick={() => {
+            window.open(
+              "https://cal.com/rebhav-bharadwaj/introductory-chat",
+              "_blank"
+            );
+          }}
           className="bg-white text-background hover:bg-white/90 cursor-pointer transition-all duration-300"
         >
           Book a call

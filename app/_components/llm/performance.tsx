@@ -8,13 +8,16 @@ export const Performance = ({ className }: { className?: string }) => {
   return (
     <Box
       className={cn(
-        "w-full p-4 font-semibold text-xs flex flex-col gap-4",
+        "w-full p-6 font-semibold text-xs flex flex-col gap-4",
         className
       )}
       zeroZero={false}
       zeroOne={false}
     >
-      <Gauge className="w-6 h-6" />
+      <div className="flex items-center gap-2 justify-between">
+        <h3 className="text-3xl font-bold text-red-500">34</h3>
+        <Gauge className="w-6 h-6" />
+      </div>
       <div className="flex items-center gap-2">
         <p>Performance</p>
         <div className="flex items-center gap-2 rounded-xl px-4 py-1 bg-red-50 text-[8px]">
@@ -22,9 +25,6 @@ export const Performance = ({ className }: { className?: string }) => {
           <p className="text-red-700">Action Required</p>
         </div>
       </div>
-      <p className="text-xs text-foreground/64">
-        Lorem ipsum bibendum adipiscing adipiscing eu ridiculus mauris sit nunc.
-      </p>
     </Box>
   );
 };
@@ -33,7 +33,7 @@ export const PerformanceLocked = ({ className }: { className?: string }) => {
   return (
     <Box
       className={cn(
-        "w-full p-4 font-semibold text-xs flex flex-col gap-4 relative",
+        "w-full p-6 font-semibold text-xs flex flex-col gap-4 relative",
         className
       )}
       zeroZero={false}
@@ -44,7 +44,10 @@ export const PerformanceLocked = ({ className }: { className?: string }) => {
         <LockSvg />
         Locked
       </button>
-      <Gauge className="w-6 h-6 blur-xs" />
+      <div className="flex items-center gap-2 justify-between blur-xs">
+        <h3 className="text-3xl font-bold text-red-500">34</h3>
+        <Gauge className="w-6 h-6" />
+      </div>
       <div className="flex items-center gap-2 blur-xs">
         <p>Performance</p>
         <div className="flex items-center gap-2 rounded-xl px-4 py-1 bg-red-50 text-[8px]">
@@ -52,9 +55,6 @@ export const PerformanceLocked = ({ className }: { className?: string }) => {
           <p className="text-red-700">Action Required</p>
         </div>
       </div>
-      <p className="text-xs text-foreground/64 blur-xs">
-        Lorem ipsum bibendum adipiscing adipiscing eu ridiculus mauris sit nunc.
-      </p>
     </Box>
   );
 };
