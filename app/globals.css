@@ -120,6 +120,8 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  .home-page {
     background-image: radial-gradient(
       circle at 50% 0%,
       #2c2c2c 0%,

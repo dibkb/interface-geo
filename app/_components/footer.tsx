@@ -6,7 +6,7 @@ import { Xsvg, LinkedinSvg } from "./svg/social";
 const Footer = ({ className }: { className?: string }) => {
   return (
     <ThreeGridLayout className={cn("border-none", className)}>
-      <section className="flex h-full items-center pt-8 px-12 justify-between relative">
+      <section className="flex h-full items-center pt-[2%] px-12 justify-between relative">
         <Link
           href="/"
           className="text-sm text-foreground/64 font-semibold hover:text-foreground transition-colors duration-300"

@@ -4,12 +4,12 @@ import MainSection from "./_components/main";
 import Footer from "./_components/footer";
 export default function Home() {
   return (
-    <main>
+    <main className="home-page">
       <Navbar />
       <section className="h-[calc(100vh-100px)] flex flex-col">
         <Hero />
         <MainSection />
-        <Footer className="flex-1" />
+        <Footer className="h-[150px]" />
       </section>
     </main>
   );

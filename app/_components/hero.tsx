@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import ThreeGridLayout from "../_layout/three-grid";
 import { cn } from "@/lib/utils";
@@ -6,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 const Hero = () => {
   return (
-    <ThreeGridLayout className="h-[60vh]">
+    <ThreeGridLayout className="h-full">
       <section className="flex flex-col h-full items-center justify-center relative">
         {/* arcs */}
         <div className="absolute bottom-0 left-0 w-44 h-44 rounded-tr-full border-t border-r border-foreground/8" />
@@ -44,9 +45,14 @@ const Hero = () => {
             />
           </form>
         </div>
-        <Button className="mt-8 bg-white text-black hover:bg-foreground/90 cursor-pointer transition-all duration-200 py-6 flex items-center gap-2 font-bold">
-          Try for free
-          <ArrowRight className="w-4 h-4" />
+        <Button
+          asChild
+          className="mt-8 bg-white text-black hover:bg-foreground/90 cursor-pointer transition-all duration-200 py-6 flex items-center gap-2 font-bold"
+        >
+          <Link href="/auth/signin">
+            Try for free
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </Button>
       </section>
     </ThreeGridLayout>
